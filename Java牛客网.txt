@@ -1,0 +1,28 @@
+Java8 邮箱验证
+描述:
+请根据给出的正则表达式来验证邮箱格式是否合法,如果用户输入的格式合法则输出
+[邮箱格式合法],否则输出 [邮箱格式不合法]
+
+输入描述:
+任意字符串
+输出描述:
+根据输入的邮箱格式判断其合法于不合法,若输入字符串符合邮箱格式则输出格式合法,
+否则输出邮箱格式不合法
+
+示例1
+输入:123123@nowcoder.com
+输出:邮箱格式合法
+
+示例2
+输入: 123123
+输出: 邮箱格式不合法
+
+代码如下
+import java.util.Scanner;
+ public static void main(String[] args) {
+   Scanner scanner = new Scanner(System.in);
+     String str = scanner.next();
+     String emailMatcher = '[a-zA-Z0-9]+@[a-zA-Z0-9]+\\.[a-zA-Z0-9]+";
+    System.out.println(str.matches(emailMatcher) ? "邮箱格式合法":"邮箱格式不合法");
+   }
+}
